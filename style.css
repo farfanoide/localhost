@@ -1,0 +1,83 @@
+/* =============================================================================
+                      RESET
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,hgroup,menu,nav,section,menu,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}nav ul{list-style:none}article,aside,figure,footer,header,hgroup,nav,section{display:block}blockquote,q{quotes:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+
+    /* =============================================================================
+                      STYLES
+        ========================================================================== */
+html{
+    background: black url(img/body-bg.png) top left repeat;
+}
+body{
+    margin: 0 auto;
+    font-family:helvetica neue;
+    /* RADIAL GRADIENT IN CASE SOMEBODY LIKES IT...
+    background-image:  -webkit-gradient(radial, 50% 100%,100,50% -50%,100, to(rgba(255,250,244,0.30)), from(rgba(226,232,221,0.00)));
+    background-image:   -webkit-radial-gradient(50% 0%, rgba(255,250,244,0.20), rgba(226,232,221,0.00));
+    background-image:      -moz-radial-gradient(50% 0%, rgba(255,250,244,0.20), rgba(226,232,221,0.00));
+    background-image:        -o-radial-gradient(50% 0%, rgba(255,250,244,0.20), rgba(226,232,221,0.00));
+    background-image:       -ms-radial-gradient(50% 0%, rgba(255,250,244,0.20), rgba(226,232,221,0.00));
+    background-image:           radial-gradient(50% 0%, rgba(255,250,244,0.20), rgba(226,232,221,0.00));*/
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.17) 50%, rgba(255,255,255,0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.17)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.17) 50%,rgba(255,255,255,0) 100%);  
+    background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.17) 50%,rgba(255,255,255,0) 100%); 
+    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.17) 50%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.17) 50%,rgba(255,255,255,0) 100%);
+
+}
+#content{
+   padding: 20px;
+}
+span{
+  float:left;
+  color: #d8d8d8;
+   border-bottom: 1px solid #d8d8d8;  
+}
+li{
+   list-style: none;    
+}
+li a{
+   text-transform:uppercase;
+   margin:5px auto;
+   padding: 5px;
+   color: #d8d8d8;
+   text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+   text-decoration:none;
+   text-align: center;
+   border-bottom:1px solid rgba(117,119,123,0.5);
+   border-top:1px solid rgba(0,0,0,0.5);
+   max-width:400px;
+   display: block;
+   -moz-border-radius   : 3px;  
+   -webkit-border-radius: 3px;  
+   -o-border-radius     : 3px;
+   border-radius        : 3px;
+   -webkit-box-shadow   : 0px 0px 10px rgba(0,0,0,0.4) inset;
+   -moz-box-shadow      : 0px 0px 10px rgba(0,0,0,0.4) inset;
+   box-shadow           : 0px 0px 10px rgba(0,0,0,0.4) inset;
+   -webkit-transition:all 0.3s ease-in-out;
+   -moz-transition   :all 0.3s ease-in-out;
+   -o-transition     :all 0.3s ease-in-out;
+   transition        :all 0.3s ease-in-out;
+
+}
+
+li a:hover{
+   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.05)),to(rgba(0, 0, 0, 0.09)));
+   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.09));
+   background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.09));
+   background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.09));
+   background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.09));
+   background-image: linear-gradient(top, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.09));
+}
+li a:active{
+   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.09)),to(rgba(255, 255, 255, 0.05)));
+   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.09), rgba(255, 255, 255, 0.05));
+   background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.09), rgba(255, 255, 255, 0.05));
+   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.09), rgba(255, 255, 255, 0.05));
+   background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.09), rgba(255, 255, 255, 0.05));
+   background-image: linear-gradient(top, rgba(0, 0, 0, 0.09), rgba(255, 255, 255, 0.05));
+   }
