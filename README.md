@@ -6,6 +6,7 @@ Just a script to "beautify" your local server.
 
 ##Installation
 to install drop index.php to the root of your local server.
+you'll also need the [Ubuntu Condensed](http://font.ubuntu.com/) font.
 
 ##Disclaimer
 i don't recommend using this on your web server as it is vulnerable to attacks. this is intended for local use only.
