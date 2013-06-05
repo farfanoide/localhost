@@ -87,7 +87,7 @@
 <?php
   // open current directory 
   $rootDir = opendir(".");
-
+  $dirArray = [];
   // get each entry
   while($element = readdir($rootDir)) {
     // exclude files and hidden folders
@@ -99,12 +99,14 @@
   closedir($rootDir);
   //  count elements in array
   $projectCount = count($dirArray) ;
-  // sort 'em
-  sort($dirArray);
+  if ($projectCount > 0) {
+    // sort 'em
+    sort($dirArray);
+  }
 ?>
 <body>
   <div class="content">
-    <span> <?php echo $projectCount ?> Projects</span>
+    <span> <?php echo ($projectCount > 0)? $projectCount : "No"; ?> Projects</span>
     <ul class="sites">
       <?php if ($projectCount > 0) : ?>
         <?php foreach ($dirArray as $dir):?>
