@@ -19,7 +19,7 @@
       }
       body{
           color: #cbcbcb;
-          font-family: ubuntu condensed;
+          font-family: 'Ubuntu Condensed', 'Helvetica Neue', sans-serif;
           height: 100%;
       }
       a {
