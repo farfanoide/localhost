@@ -33,10 +33,10 @@
       }
       span{
          float:left;
-         border-bottom: 1px solid #d8d8d8;  
+         border-bottom: 1px solid #d8d8d8;
       }
       li{
-         list-style: none;    
+         list-style: none;
       }
       li a{
          text-transform:uppercase;
@@ -49,8 +49,8 @@
          border-top:1px solid rgba(0,0,0,0.5);
          max-width:400px;
          display: block;
-         -moz-border-radius   : 3px;  
-         -webkit-border-radius: 3px;  
+         -moz-border-radius   : 3px;
+         -webkit-border-radius: 3px;
          -o-border-radius     : 3px;
          border-radius        : 3px;
          -webkit-box-shadow   : 0px 0px 10px rgba(0,0,0,0.4) inset;
@@ -86,24 +86,20 @@
     </style>
 </head>
 <?php
-  // open current directory 
-  $rootDir = opendir(".");
-  $dirArray = [];
-  // get each entry
-  while($element = readdir($rootDir)) {
-    // exclude files and hidden folders
-    if (is_dir($element) and (substr($element, 0, 1) != ".")){ 
-      $dirArray[] = $element;
-    }
+$rootDir = opendir("."); // open current directory
+$dirArray = [];
+
+// get each entry
+while($element = readdir($rootDir)) {
+  // exclude files and hidden folders
+  if (is_dir($element) && (substr($element, 0, 1) != ".")) {
+    $dirArray[] = $element;
   }
-  // close directory
-  closedir($rootDir);
-  //  count elements in array
-  $projectCount = count($dirArray) ;
-  if ($projectCount > 0) {
-    // sort 'em
-    sort($dirArray);
-  }
+}
+
+closedir($rootDir);                         // close directory
+$projectCount = count($dirArray) ;          // count elements in array
+if ($projectCount > 0) { sort($dirArray); } // sort 'em
 ?>
 <body>
   <div class="content">
@@ -114,7 +110,7 @@
           <li><a href="<?php echo $dir ;?>"><?php echo $dir ;?></a></li>
         <?php endforeach; ?>
       <?php else: ?>
-        <li><a href="#">Nothin here, start adding projects to your server.</a></li>
+        <li><a href="#">Nothing here, start adding projects to your server.</a></li>
       <?php endif; ?>
     </ul>
   </div>
